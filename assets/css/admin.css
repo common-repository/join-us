@@ -1,0 +1,11 @@
+.ff-joinus-settings-wrap {
+	max-width: 800px;
+}
+.ff-joinus-settings-form {
+	border: 1px solid #e5e5e5;
+	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.04);
+	box-shadow: 0 1px 1px rgba(0,0,0,.04);
+	background: #fff;
+	padding: 15px 30px;
+	margin: 30px 0 30px 30px;
+}

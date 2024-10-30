@@ -1,0 +1,168 @@
+/*------------------------------------------------------------------
+[FRONT.CSS - Default styles for a front-end part]
+[Table of contents]
+
+1. Caption
+	1.1. Header
+	1.2. Button
+2. Grid
+	2.1 Shared styles
+	2.2 Hover effects
+		2.2.1 Grayscale
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+  1. Caption
+  	1.1. Header
+-------------------------------------------------------------------*/
+.ff-joinus-caption {
+	display: flex;
+	justify-content: center;
+}
+.ff-joinus-caption h1, .ff-joinus-caption h2, .ff-joinus-caption h3,
+.ff-joinus-caption h4, .ff-joinus-caption h5, .ff-joinus-caption h6 {
+	margin-bottom: 0;
+}
+.ff-joinus-caption .ff-joinus-title {
+	padding-right: 25px;
+}
+/*------------------------------------------------------------------
+  1. Caption
+  	1.2. Button
+-------------------------------------------------------------------*/
+.ff-joinus-caption .ff-joinus-button {
+	padding-left: 25px;
+}
+.ff-joinus-caption .ff-joinus-button:after,
+.ff-joinus-caption .ff-joinus-button:before {
+	display: none;
+}
+.ff-joinus-caption .ff-joinus-button,
+.ff-joinus-caption .ff-joinus-button:hover,
+.ff-joinus-caption .ff-joinus-button:active,
+.ff-joinus-caption .ff-joinus-button:focus {
+	text-transform: none;
+	padding: 15px 30px;
+	color: #fff;
+	background: #1a77d3;
+	text-decoration: none;
+	animation: none;
+	border: 0;
+	border-radius: 25px;
+	box-shadow: none;
+	white-space: nowrap;
+	transition: all 0.3s;
+	outline: none;
+}
+.ff-joinus-caption .ff-joinus-button {
+	transition: box-shadow 0.3s, background-color 0.3s, color 0.3s;
+}
+.ff-joinus-caption .ff-joinus-button:hover,
+.ff-joinus-action.open .ff-joinus-button {
+	box-shadow: 0px 0px 0px 9px rgba( 26, 119, 211, 0.4);
+}
+.ff-joinus-action {
+	position: relative;
+}
+.ff-joinus-join-social-links {
+	background: #000;
+	font-size: 16px;
+	line-height: 24px;
+	border-radius: 30px;
+	padding: 10px 15px;
+	position: absolute;
+	color: #fff;
+	left: 50%;
+	transform: translateX(0);
+	top: -15px;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.3s, transform 0.5s;
+	white-space: nowrap;
+}
+.ff-joinus-action.open .ff-joinus-join-social-links {
+	opacity: 1;
+	visibility: visible;
+	transform: translateX(-50%);
+}
+.ff-joinus-caption .ff-joinus-join-social-links > a:before {
+	display: none;
+}
+.ff-joinus-caption .ff-joinus-join-social-links > a:after {
+	content: '';
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 7px 7px 0 7px;
+	border-color: #000 transparent transparent transparent;
+	position: absolute;
+	left: 50%;
+	bottom: -7px;
+	margin-left: -7px;
+}
+.ff-joinus-caption .ff-joinus-join-social-links > a {
+	color: #fff;
+	transition: color 0.3s;
+	margin: 0 5px;
+	font-size: 16px;
+	line-height: 24px;
+	text-decoration: none;
+	box-shadow: none;
+}
+.ff-joinus-caption .ff-joinus-join-social-links > a:hover,
+.ff-joinus-caption .ff-joinus-join-social-links > a:active,
+.ff-joinus-caption .ff-joinus-join-social-links > a:focus {
+	color: #1a77d3;
+	text-decoration: none;
+	box-shadow: none;
+}
+
+/*------------------------------------------------------------------
+  2. Grid
+  	2.1 Shared styles
+-------------------------------------------------------------------*/
+.ff-joinus-grid {
+	margin-bottom: 60px;
+}
+.ff-joinus-grid-item-inside {
+	position: relative;
+	overflow: hidden;
+}
+.ff-joinus-grid-item-image img {
+	display: block;
+}
+.ff-joinus-grid-item-image > a:before,
+.ff-joinus-grid-item-image > a:after {
+	display: none;
+}
+.ff-joinus-grid-item-text {
+	color: #fff;
+	background: rgba( 0,0,0,0.8);
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	padding: 4px 15px;
+	font-size: 14px;
+	line-height: 18px;
+	text-align: center;
+	transform: translateY(100%);
+	transition: transform 0.3s;
+}
+.ff-joinus-grid-item:hover .ff-joinus-grid-item-text {
+	transform: translateY(0);
+}
+
+/*------------------------------------------------------------------
+  2. Grid
+	2.2 Hover effects
+		2.2.1 Grayscale
+-------------------------------------------------------------------*/
+.ff-hover-effect-grayscale .ff-joinus-grid-item-image img {
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
+.ff-hover-effect-grayscale .ff-joinus-grid-item:hover .ff-joinus-grid-item-image img {
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0);
+}
